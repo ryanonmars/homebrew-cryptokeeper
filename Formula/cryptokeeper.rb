@@ -20,12 +20,10 @@ class Cryptokeeper < Formula
 
     def install
       bin.install "cryptokeeper"
-      bin.install_symlink "cryptokeeper" => "keeper"
     end
   end
 
   test do
     assert_match "Encrypted storage for cryptocurrency", shell_output("#{bin}/cryptokeeper --help")
-    assert_match "Encrypted storage for cryptocurrency", shell_output("#{bin}/keeper --help")
   end
 end
