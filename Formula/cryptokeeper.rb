@@ -4,19 +4,28 @@
 class Cryptokeeper < Formula
   desc "CLI encrypted storage for cryptocurrency private keys and seed phrases"
   homepage "https://github.com/ryanonmars/CryptoKeeper"
-  version "0.2.3"
+  version "0.2.4"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/ryanonmars/CryptoKeeper/releases/download/v0.2.3/cryptokeeper-macos-x86_64.zip"
-      sha256 "a260eeaa3a0914085d432cd7f1afae0fc8aacd1f1747eddb6954b0970da717af"
+      url "https://github.com/ryanonmars/CryptoKeeper/releases/download/v0.2.4/cryptokeeper-macos-x86_64.zip"
+      sha256 "3f7c2692ab7f8b38898a0f95d3168cd15f074b9cf6de766bec1f781e0a20313f"
     end
 
     on_arm do
-      url "https://github.com/ryanonmars/CryptoKeeper/releases/download/v0.2.3/cryptokeeper-macos-aarch64.zip"
-      sha256 "3e190743069316353d653b91a11408278782b1ee0c8ed619da346f646d740f7c"
+      url "https://github.com/ryanonmars/CryptoKeeper/releases/download/v0.2.4/cryptokeeper-macos-aarch64.zip"
+      sha256 "41c3f8c968405a4d803510cc33e7c194198e568ed2dbcce4c852ae565d712997"
     end
+
+    def install
+      bin.install "cryptokeeper"
+    end
+  end
+
+  on_linux do
+    url "https://github.com/ryanonmars/CryptoKeeper/releases/download/v0.2.4/cryptokeeper-linux-x86_64.zip"
+    sha256 "5a4bcdafe11ec4159f97c5d65a68ead427adec801921f668c70994987c8e250c"
 
     def install
       bin.install "cryptokeeper"
